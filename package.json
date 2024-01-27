@@ -4,7 +4,6 @@
   "description": "",
   "type": "commonjs",
   "scripts": {
-    "dev": "vite",
     "start": "concurrently \"nodemon server.ts\" \"vite\""
   },
   "keywords": [],
