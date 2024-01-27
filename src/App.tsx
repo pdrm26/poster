@@ -1,7 +1,12 @@
 import { createRoot } from "react-dom/client";
+import Login from "./pages/Login";
 
 export default function App() {
-  return <div>App</div>;
+  return (
+    <>
+      <Login />
+    </>
+  );
 }
 
 const container = document.getElementById("root");
