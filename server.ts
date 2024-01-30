@@ -15,7 +15,7 @@ app.post("/login", (req: Request, res: Response) => {
   if (username === "admin" && password === "admin") {
     res.send({
       success: true,
-      data: token,
+      token,
     });
   }
   res.send({
@@ -27,7 +27,7 @@ app.post("/login", (req: Request, res: Response) => {
 app.get("/users/me", (req: Request, res: Response) => {
   const { authorization } = req.headers;
 
-  if (token === authorization) {
+  if (authorization === token) {
     res.send({
       success: true,
       data: {
